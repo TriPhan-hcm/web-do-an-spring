@@ -61,7 +61,7 @@ public class ProductAPIController {
             List<Category> categoryList = categoryService.getListAllCategories();
             List<Product> productList = productService.getListAllProducts();
             Random random = new Random();
-            for(long i = totalProducts + 1; i <= 10; i++ ) {
+            for(long i = totalProducts + 1; i <= 5; i++ ) {
                 Product product = new Product();
                 product.setName("Product " + i);
                 product.setShortDesc("Short Desc Product "+ i);
@@ -70,15 +70,16 @@ public class ProductAPIController {
                 product.setManufacturer("Manufacturer Product " + i);
                 product.setModel("Model Product " + i);
                 product.setScreen("Screen " + 1);
-                product.setResolution("Resolutiong "+i);
+                product.setResolution("Resolution "+i);
                 product.setCpu("CPU " + i);
                 product.setRam("Ram "+i);
                 product.setCamera("Camera "+i);
                 product.setPin("Pin " + i);
                 product.setOther("Other " + i);
-                product.setCreateDate(new Date());
                 product.setYearGuaratee(1);
                 product.setCategory(categoryList.get(random.nextInt(categoryList.size())));
+                product.setSize("Size "+ i);
+                product.setCreateDate(new Date());
 
 
                 productList.add(product);
@@ -108,6 +109,7 @@ public class ProductAPIController {
             product.setManufacturer(dto.getManufacturer());
             product.setModel(dto.getModel());
             product.setScreen(dto.getScreen());
+            product.setSize((dto.getSize()));
             product.setResolution(dto.getResolution());
             product.setCpu(dto.getCpu());
             product.setRam(dto.getRam());
@@ -143,6 +145,7 @@ public class ProductAPIController {
             product.setManufacturer(dto.getManufacturer());
             product.setModel(dto.getModel());
             product.setScreen(dto.getScreen());
+            product.setSize((dto.getSize()));
             product.setResolution(dto.getResolution());
             product.setCpu(dto.getCpu());
             product.setRam(dto.getRam());
@@ -161,12 +164,6 @@ public class ProductAPIController {
             result.setMessage(e.getMessage());
         }
         return result;
-    }
-    @DeleteMapping("update/{productId}")
-    public void deleteProduct (@PathVariable int productId) {
-
-        productService.deleteProduct(productId);
-
     }
 
     @GetMapping("/detail/{productId}")
@@ -191,6 +188,7 @@ public class ProductAPIController {
                 dto.setManufacturer(product.getManufacturer());
                 dto.setModel(product.getModel());
                 dto.setScreen(product.getScreen());
+                product.setSize((dto.getSize()));
                 dto.setResolution(product.getResolution());
                 dto.setCpu(product.getCpu());
                 dto.setRam(product.getRam());

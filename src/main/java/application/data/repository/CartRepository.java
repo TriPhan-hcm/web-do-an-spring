@@ -17,4 +17,7 @@ public interface CartRepository extends JpaRepository<Cart,Integer> {
             "ORDER BY c.cart_id DESC LIMIT 1",nativeQuery = true)
     Cart findByUserName(@Param("userName") String userName);
 
+    @Query("select count(c.id) from tbl_cart c")
+    long getTotalCart();
+
 }

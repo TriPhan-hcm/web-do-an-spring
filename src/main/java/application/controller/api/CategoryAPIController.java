@@ -17,10 +17,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/api/category")
-
 public class CategoryAPIController {
     private static final Logger logger = LogManager.getLogger(CategoryAPIController.class);
-
 
     @Autowired
     private CategoryService categoryService;
@@ -32,7 +30,7 @@ public class CategoryAPIController {
         try {
             long totalCategories = categoryService.getTotalCategories();
             List<Category> categoryList = new ArrayList<>();
-            for(long i = totalCategories +1; i<= totalCategories + 5; i++) {
+            for(long i = totalCategories +1; i<= totalCategories + 3; i++) {
                 Category category = new Category();
                 category.setName("Category " + i);
                 category.setShortDesc("Category " + i + " short desc");
