@@ -557,4 +557,12 @@ a {
 .content-info-tskt {
     display: inline-block;
     font-size: 12px;
+<<<<<<< HEAD
+=======
+}
+.item-color{
+    padding: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+>>>>>>> 29b92ac8519bd3d700a8f48eca64033fea37b3b6
 }

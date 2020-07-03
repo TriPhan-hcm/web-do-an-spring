@@ -41,7 +41,11 @@
     padding: 5px 10px 0px 10px;
 }
 .sanPham label.giamgia {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 29b92ac8519bd3d700a8f48eca64033fea37b3b6
     background-image: -webkit-linear-gradient(left, #ff9c00 0%, #ec1f1f 100%);
     background-image: -o-linear-gradient(left, #ff9c00 0%, #ec1f1f 100%);
     background-image: linear-gradient(90deg, #ff9c00 0%, #ec1f1f 100%);
