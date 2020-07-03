@@ -1,6 +1,7 @@
 package application.data.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity(name = "tbl_product_guarantee")
 public class ProductGuarantee {
@@ -13,7 +14,7 @@ public class ProductGuarantee {
     private String detail;
 
     @Column(name = "day_guarantee")
-    private String guaranteeDay;
+    private Date guaranteeDay;
 
     @Column(name = "product_order_id", insertable = false, updatable = false)
     private int productOrderId;
@@ -49,11 +50,11 @@ public class ProductGuarantee {
         this.detail = detail;
     }
 
-    public String getGuaranteeDay() {
+    public Date getGuaranteeDay() {
         return guaranteeDay;
     }
 
-    public void setGuaranteeDay(String guaranteeDay) {
+    public void setGuaranteeDay(Date guaranteeDay) {
         this.guaranteeDay = guaranteeDay;
     }
 

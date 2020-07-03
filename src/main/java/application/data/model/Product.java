@@ -30,6 +30,9 @@ public class Product {
 	@Column(name = "short_desc")
 	private String shortDesc;
 
+	@Column(name="product_main_image")
+	private String product_main_image;
+
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
 	private List<ProductImage> productImageList = new ArrayList<>();
 
@@ -41,6 +44,9 @@ public class Product {
 
 	@Column(name = "screen")
 	private String screen;
+
+	@Column(name = "size")
+	private String size;
 
 	@Column(name = "resolution")
 	private String resolution;
@@ -114,6 +120,14 @@ public class Product {
 
 	public void setShortDesc(String shortDesc) {
 		this.shortDesc = shortDesc;
+	}
+
+	public String getProduct_main_image() {
+		return product_main_image;
+	}
+
+	public void setProduct_main_image(String product_main_image) {
+		this.product_main_image = product_main_image;
 	}
 
 	public List<ProductImage> getProductImageList() {
@@ -268,6 +282,22 @@ public class Product {
 
 	public void setMainImage(String mainImage) {
 		this.mainImage = mainImage;
+	}
+
+	public String getSize() {
+		return size;
+	}
+
+	public void setSize(String size) {
+		this.size = size;
+	}
+
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
 	}
 }
 

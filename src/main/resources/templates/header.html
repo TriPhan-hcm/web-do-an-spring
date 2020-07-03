@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <title>Trang chủ</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="../static/image/favicon.ico}" th:href="@{/image/favicon.ico}">
+    <link rel="stylesheet" href="../static/js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" th:href="@{/js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css}">
+    <link rel="stylesheet" href="../static/js/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" th:href="@{/js/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="../static/css/home.css" th:href="@{/css/home.css}">
+
+</head>
+<body>
+
+<div class="top-nav group">
+    <div class="container">
+        <section>
+            <div class="social-top-nav">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a thref="#" class="fa fa-youtube"></a>
+            </div> <!-- End Social Topnav -->
+
+            <ul class="top-nav-quicklink flexContain">
+                <li><a th:href="@{/home}"><i class="fa fa-home"></i> Trang chủ</a></li>
+                <li><a th:href="@{/tintuc}"><i class="fa fa-newspaper-o"></i> Tin tức</a></li>
+                <li><a th:href="@{/tuyendung}"><i class="fa fa-handshake-o"></i> Tuyển dụng</a></li>
+                <li><a th:href="@{/gioithieu}"><i class="fa fa-info-circle"></i> Giới thiệu</a></li>
+                <li><a th:href="@{/baohanh}"><i class="fa fa-wrench"></i> Bảo hành</a></li>
+                <li><a th:href="@{/lienhe}"><i class="fa fa-phone"></i> Liên hệ</a></li>
+            </ul> <!-- End Quick link -->
+        </section><!-- End Section -->
+    </div>
+</div>
+<section>
+    <div class="header group">
+        <div class="container header1">
+            <div class="logo">
+                <a th:href="@{/home}">
+                    <img src="../static/image/logo.png" th:src="@{/image/logo.png}" alt="Trang chủ Smartphone Store" title="Trang chủ Smartphone Store">
+                </a>
+            </div> <!-- End Logo -->
+
+            <div class="content">
+                <div class="search-header">
+                    <form class="input-search" method="get" action="index.html">
+                        <div class="autocomplete">
+                            <input id="search-box" name="search" autocomplete="off" type="text" placeholder="Nhập từ khóa tìm kiếm...">
+                            <button type="submit">
+                                <i class="fa fa-search"></i>
+                                Tìm kiếm
+                            </button>
+                        </div>
+                    </form> <!-- End Form search -->
+                    <div class="tags">
+                        <strong>Từ khóa: </strong>
+                        <a th:href="@{/index.html?search=Samsung}">Samsung</a>
+                        <a th:href="@{/index.html?search=Iphone}">iPhone</a>
+                        <a th:href="@{/index.html?search=Huawei}">Huawei</a>
+                        <a th:href="@{/index.html?search=Oppo}">Oppo</a>
+                        <a th:href="@{/index.html?search=Mobi}">Mobi</a></div>
+                </div> <!-- End Search header -->
+
+                <div class="tools-member">
+                    <div class="member">
+                        <a onclick="checkTaiKhoan()">
+                            <i class="fa fa-user"></i>
+                            Tài khoản
+                        </a>
+                        <div class="menuMember hide">
+                            <a th:href="@{/nguoidung}">Trang người dùng</a>
+                            <a onclick="if(window.confirm('Xác nhận đăng xuất ?')) logOut();">Đăng xuất</a>
+                        </div>
+
+                    </div> <!-- End Member -->
+
+                    <div class="cart">
+                        <a th:href="@{/giohang}">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>Giỏ hàng</span>
+                            <span class="cart-number"></span>
+                        </a>
+                    </div> <!-- End Cart -->
+
+
+                </div><!-- End Tools Member -->
+            </div> <!-- End Content -->
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -28,7 +28,7 @@ public class SizeColorApiController {
     private ProductService productService;
 
     private String[] arrColor = {"Trắng", "Xanh","Vàng","Đen","Bạch Kim","Hồng"};
-    private String[] arrSize = {"64GB", "128GB","256GB"};
+//    private String[] arrSize = {"64GB", "128GB","256GB"};
 
     @GetMapping("/fake")
     public BaseApiResult fakeProductImage() {
@@ -57,7 +57,7 @@ public class SizeColorApiController {
                         sizeColor.setProduct(product);
 
                         sizeColor.setColor(arrColor[random.nextInt(arrColor.length)]);
-                        sizeColor.setSize(arrSize[random.nextInt(arrSize.length)]);
+//                        sizeColor.setSize(arrSize[random.nextInt(arrSize.length)]);
                         int amountMin = 1;
                         int amountMax = 50;
                         int randomAmount = (int) (amountMin + Math.floor((amountMax - amountMin) * random.nextDouble()));
@@ -85,7 +85,7 @@ public class SizeColorApiController {
         try {
             SizeColor sizeColor = new SizeColor();
             sizeColor.setProduct(productService.findOne(dto.getProductId()));
-            sizeColor.setSize(dto.getSize());
+//            sizeColor.setSize(dto.getSize());
             sizeColor.setColor(dto.getColor());
             sizeColor.setAmount(dto.getAmount());
             sizeColor.setPrice(dto.getPrice());
@@ -108,7 +108,7 @@ public class SizeColorApiController {
         try {
             SizeColor sizeColor = sizeColorService.findOne(sizeColorId);
             sizeColor.setProduct(productService.findOne(dto.getProductId()));
-            sizeColor.setSize(dto.getSize());
+//            sizeColor.setSize(dto.getSize());
             sizeColor.setColor(dto.getColor());
             sizeColor.setAmount(dto.getAmount());
             sizeColor.setPrice(dto.getPrice());
@@ -140,7 +140,7 @@ public class SizeColorApiController {
                 dto.setAmount(sizeColorEntity.getAmount());
                 dto.setColor(sizeColorEntity.getColor());
                 dto.setPrice(sizeColorEntity.getPrice());
-                dto.setSize(sizeColorEntity.getSize());
+//                dto.setSize(sizeColorEntity.getSize());
                 result.setSuccess(true);
                 result.setData(dto);
             }

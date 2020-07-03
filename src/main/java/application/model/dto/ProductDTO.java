@@ -21,6 +21,7 @@ public class ProductDTO {
     private String camera;
     private String pin;
     private String other;
+    private String size;
 
     @JsonSerialize(using = CustomDateSerializer.class)
     private Date createdDate;
@@ -131,5 +132,13 @@ public class ProductDTO {
 
     public void setYearGuaratee(int yearGuaratee) {
         this.yearGuaratee = yearGuaratee;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
     }
 }

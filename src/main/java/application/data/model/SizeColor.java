@@ -13,9 +13,6 @@ public class SizeColor {
     @Column(name = "price")
     private double price;
 
-    @Column(name = "size")
-    private String size;
-
     @Column(name = "color")
     private String color;
 
@@ -55,14 +52,6 @@ public class SizeColor {
 
     public void setPrice(double price) {
         this.price = price;
-    }
-
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
     }
 
     public String getColor() {
