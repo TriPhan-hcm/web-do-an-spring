@@ -83,7 +83,7 @@
     </div>
     <div class="row tbl-sp">
         <div class="sanPham col-lg-3 col-md-3 col-sm-6 col-12" th:each="vmo : ${vm.getObjectProductVM()}">
-            <a <a th:href="@{'/chi-tiet/'+${vmo.getId()}}">
+             <a th:href="@{'/chi-tiet/'+${vmo.getId()}}">
                 <img th:src="@{${vmo.getMainImage()}}" alt="">
                 <h3 th:text="${vmo.getName()}"></h3>
                 <div class="price" th:if="${vmo.getDiscount() != null}">

@@ -45,14 +45,13 @@ public class CartProductApiController {
                         CartProduct cartProduct = new CartProduct();
 
                         cartProduct.setAmount(dto.getAmount());
-                        cartProduct.setSize(dto.getSize());
                         cartProduct.setColor(dto.getColor());
                         cartProduct.setPrice(dto.getPrice());
                         cartProduct.setCart(cartEntity);
                         cartProduct.setProduct(productEntity);
 
                         cartProductService.addNewCartProduct(cartProduct);
-                    }
+                    } // ông bảo chạy đâu
                     result.setMessage("Add to cart successfully!");
                     result.setSuccess(true);
                     return result;

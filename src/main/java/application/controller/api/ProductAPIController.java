@@ -66,7 +66,7 @@ public class ProductAPIController {
                 product.setName("Product " + i);
                 product.setShortDesc("Short Desc Product "+ i);
                 product.setDescription("Description Product " + i);
-                product.setMainImage("Product main "+ i);;
+                product.setMainImage(images[random.nextInt(images.length)]);;
                 product.setManufacturer("Manufacturer Product " + i);
                 product.setModel("Model Product " + i);
                 product.setScreen("Screen " + 1);

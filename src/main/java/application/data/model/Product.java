@@ -30,7 +30,7 @@ public class Product {
 	@Column(name = "short_desc")
 	private String shortDesc;
 
-	@Column(name="product_main_image")
+	@Column(name="product_main_image",insertable = false, updatable = false)
 	private String product_main_image;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
